@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cutest-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cutest
+  template:
+    metadata:
+      labels:
+        app: cutest
+    spec:
+      containers:
+        - name: cutest-app
+          image: your-image-name
+          ports:
+            - containerPort: 8000
+              env:
+              - name: APP_NAME
+                value: cutest
