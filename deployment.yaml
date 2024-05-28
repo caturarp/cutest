@@ -13,10 +13,7 @@ spec:
         app: cutest
     spec:
       containers:
-        - name: cutest-app
-          image: your-image-name
+        - name: cutest
+          image: cutest
           ports:
             - containerPort: 8000
-              env:
-              - name: APP_NAME
-                value: cutest

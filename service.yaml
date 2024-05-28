@@ -7,6 +7,6 @@ spec:
     app: cutest
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 800
+      port: 8000
+      targetPort: 8000
   type: LoadBalancer
