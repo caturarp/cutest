@@ -6,8 +6,14 @@ WORKDIR /app
 
 # copy and build
 COPY . .
-RUN go build -o main .
 
+RUN go build -o cutest .
+
+# alpine image
+FROM alpine:latest
+
+COPY --from=builder /app/cutest /cutest
+COPY --from=builder /app/index.html /index.html
 # expose port
 EXPOSE 8000 
 

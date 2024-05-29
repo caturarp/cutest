@@ -16,8 +16,9 @@ func main() {
 	http.HandleFunc("/html", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "index.html")
 	})
-
+	// create log if server up
+	fmt.Println("Server is running on port :8000")
 	// start server
-	http.ListenAndServe(":8888", nil)
+	http.ListenAndServe(":8000", nil)
 
 }
