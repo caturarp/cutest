@@ -9,7 +9,7 @@ import (
 func main() {
 	// create a simple handler
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprint(w, "Hello, World!")
+		fmt.Fprint(w, "Hello, idhul adha!")
 	})
 
 	// create a html page
