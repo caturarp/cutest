@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: cutest
-          image: caturarp/cutest:latest
+          image: caturarp/cutest
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
